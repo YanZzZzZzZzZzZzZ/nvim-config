@@ -1,3 +1,4 @@
+vim.opt.backup = false
 vim.opt.showmode = false -- Dont show mode since we have a statusline
 vim.opt.ruler = true
 vim.opt.showcmd = true
@@ -6,8 +7,6 @@ vim.opt.wrap = true
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
-
 
 vim.g.signify_sign_add = "│"
 vim.g.signify_sign_delete = "│"
@@ -19,6 +18,7 @@ vim.g.context_nvim_no_redraw = 1
 vim.o.linebreak = true
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 vim.o.relativenumber = true
+vim.o.termguicolors = true
 
 vim.o.so = 25
 

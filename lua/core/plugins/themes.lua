@@ -27,7 +27,13 @@ return {
 
   { "jim-at-jibba/ariake-vim-colors" },
 
-  { "sainnhe/edge" },
+  {
+    "sainnhe/edge",
+    config = function(...)
+      vim.g.edge_style = 'neon'
+      vim.edge_better_performance = 1
+    end
+  },
 
   { "Th3Whit3Wolf/one-nvim" },
 
@@ -139,7 +145,7 @@ return {
       'maxmx03/fluoromachine.nvim',
       opts = {
         -- HAS: retrowave, fluoromachine, delta
-        theme = "retrowave"
+        theme = "delta"
       }
     }
   },

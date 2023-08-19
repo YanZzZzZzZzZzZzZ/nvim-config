@@ -66,15 +66,6 @@ return {
   {
     "Maan2003/lsp_lines.nvim",
     opts = {},
-    config = function()
-      require("lsp_lines")
-      print('setting diagnostics')
-      vim.diagnostic.config({
-        virtual_lines = {
-          only_current_line = true,
-        },
-      })
-    end
   },
 
   {
@@ -119,4 +110,11 @@ return {
       },
     }
   },
+
+  {
+    "roobert/hoversplit.nvim",
+    config = function()
+      require("hoversplit").setup()
+    end
+  }
 }
