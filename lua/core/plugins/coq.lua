@@ -1,4 +1,13 @@
+vim.g.coq_settings = {
+  auto_start = true,
+  keymap = {
+    jump_to_mark = "",
+    bigger_preview = "",
+    pre_select = true
+  }
+}
 return {
+
   "ms-jpq/coq_nvim",
   branch = "coq",
   dependencies = {
@@ -11,9 +20,4 @@ return {
       branch = "3p",
     },
   },
-  config = function()
-    -- Automatically start coq
-    require("coq").setup({})
-    vim.g.coq_settings = { auto_start = 'shut-up' }
-  end
 }

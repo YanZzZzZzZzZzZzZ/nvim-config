@@ -7,7 +7,7 @@ M[#M + 1] = {
     options = {
       theme = "seoul256",
     },
-  }
+  },
 }
 
 M[#M + 1] = {

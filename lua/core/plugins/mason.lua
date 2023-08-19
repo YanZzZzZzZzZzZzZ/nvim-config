@@ -1,30 +1,32 @@
 return {
   {
     "williamboman/mason.nvim",
-    build = ":MasonUpdate",
     cmd = "Mason",
     lazy = false,
-    keys = { { "<leader>M", "<cmd>Mason<cr>", desc = "Mason Menu" } },
+    opts = {}
   },
 
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = {
       "williamboman/mason.nvim",
+      "lukas-reineke/lsp-format.nvim",
     },
-  },
-
-  {
-    "RubixDev/mason-update-all",
-    cmd = "MasonUpdateAll",
     config = function()
-      require("mason-update-all").setup()
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "MasonUpdateAllComplete",
-        callback = function()
-          print("mason-update-all has finished")
-        end,
+      require("mason").setup()
+      require("mason-lspconfig").setup({
+        ensure_installed = { "lua_ls", "rust_analyzer" },
+        automatic_installation = true,
+        handlers = {
+          function(server_name)
+            require("lspconfig")[server_name].setup(
+              require('coq').lsp_ensure_capabilities({
+                -- on_attach = my_custom_on_attach,
+                on_attach = require("lsp-format").on_attach
+              }))
+          end
+        }
       })
-    end,
+    end
   },
 }
