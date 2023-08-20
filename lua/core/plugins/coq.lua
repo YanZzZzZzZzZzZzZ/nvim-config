@@ -1,10 +1,35 @@
+local function border(hl_name)
+  return {
+    { "╭", hl_name },
+    { "─", hl_name },
+    { "╮", hl_name },
+    { "│", hl_name },
+    { "╯", hl_name },
+    { "─", hl_name },
+    { "╰", hl_name },
+    { "│", hl_name },
+  }
+end
+
+
 vim.g.coq_settings = {
   auto_start = true,
   keymap = {
     jump_to_mark = "",
     bigger_preview = "",
     pre_select = true
-  }
+  },
+  display = {
+    preview = {
+      -- border = border "Pmenu",
+      positions = {
+        north = 4,
+        south = 2,
+        west = nil,
+        east = 1
+      },
+    },
+  },
 }
 return {
 
@@ -21,3 +46,4 @@ return {
     },
   },
 }
+

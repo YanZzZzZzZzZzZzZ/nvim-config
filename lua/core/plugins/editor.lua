@@ -32,6 +32,7 @@ return {
       end
       remap('i', '<cr>', 'v:lua.MUtils.CR()', { expr = true, noremap = true })
 
+
       MUtils.BS = function()
         if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info({ 'mode' }).mode == 'eval' then
           return npairs.esc('<c-e>') .. npairs.autopairs_bs()
@@ -67,26 +68,32 @@ return {
       vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
       vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
 
-      -- vim.opt.list = true
-      -- vim.opt.listchars:append "space:⋅"
-      -- vim.opt.listchars:append "eol:↴"
 
       require("indent_blankline").setup {
-        space_char_blankline = " ",
+        char = "",
+        -- space_char_blankline = " ",
         show_current_context = true,
         show_current_context_start = true,
 
         char_highlight_list = {
           "IndentBlanklineIndent1",
-          -- "IndentBlanklineIndent2",
-          -- "IndentBlanklineIndent3",
-          -- "IndentBlanklineIndent4",
-          -- "IndentBlanklineIndent5",
-          -- "IndentBlanklineIndent6",
+          "IndentBlanklineIndent2",
+          "IndentBlanklineIndent3",
+          "IndentBlanklineIndent4",
+          "IndentBlanklineIndent5",
+          "IndentBlanklineIndent6",
         },
       }
     end
   },
+
+  {
+    'echasnovski/mini.indentscope',
+    version = false,
+    opts = {
+    },
+  },
+
 
   {
     "mg979/vim-visual-multi",
@@ -102,6 +109,17 @@ return {
     keys = {
       { "<leader>tO", "<cmd>SymbolsOutline<cr>", desc = "Toggle SymbolsOutline" },
     },
+  },
+
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
   },
 
 }

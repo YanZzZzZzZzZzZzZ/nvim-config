@@ -94,37 +94,43 @@ M.setup = function(whichkey)
 
       [","] = {
         name = "Lspsaga",
-        n = { ':Lspsaga diagnostic_jump_next<cr>', 'Next Diagnoses' },
-        p = { ':Lspsaga diagnostic_jump_prev<cr>', 'Prev Diagnoses' },
-        f = { ':Lspsaga finder<cr>', "Lsp finder" },
-        o = { ':Lspsaga outline<cr>', "Lsp outline" },
-        s = { ":Lspsaga signature_help<cr>", "Signature Help" },
-        d = { ":Lspsaga peek_definition<cr>", "Preview Definition" },
-        r = { ":Lspsaga rename<cr>", "Rename" },
-        a = { ":Lspsaga code_action<cr>", "Saga Code Action" },
-        g = { ":Lspsaga goto_definition<cr>", "Saga go to Definition" },
-        R = { ":Lspsaga project_replace", "Project replace args" },
-        c = { ":Lspsaga show_cursor_diagnostic<cr>", "Cursor diagnostics" }
+        n = { '<cmd>Lspsaga diagnostic_jump_next<cr>', 'Next Diagnoses' },
+        p = { '<cmd>Lspsaga diagnostic_jump_prev<cr>', 'Prev Diagnoses' },
+        f = { '<cmd>Lspsaga finder<cr>', "Lsp finder" },
+        o = { '<cmd>Lspsaga outline<cr>', "Lsp outline" },
+        s = { "<cmd>Lspsaga signature_help<cr>", "Signature Help" },
+        d = { "<cmd>Lspsaga peek_definition<cr>", "Preview Definition" },
+        r = { "<cmd>Lspsaga rename<cr>", "Rename" },
+        a = { "<cmd>Lspsaga code_action<cr>", "Saga Code Action" },
+        g = { "<cmd>Lspsaga goto_definition<cr>", "Saga go to Definition" },
+        R = { "<cmd>Lspsaga project_replace", "Project replace args" },
+        c = { "<cmd>Lspsaga show_cursor_diagnostic<cr>", "Cursor diagnostics" }
       },
 
       ["u"] = { ":UndotreeToggle<cr>", "Toggle UndotreeToggle" },
 
       ["m"] = {
         name = " Harpoon",
-        m = { ":lua require('harpoon.mark').add_file()<cr>", "Mark file" },
-        t = { ":lua require('harpoon.ui').toggle_quick_menu()<cr>", "Toggle UI" },
-        a = { ":lua require('harpoon.ui').nav_file(1)<cr>", "Goto mark 1" },
-        s = { ":lua require('harpoon.ui').nav_file(2)<cr>", "Goto mark 2" },
-        d = { ":lua require('harpoon.ui').nav_file(3)<cr>", "Goto mark 3" },
-        f = { ":lua require('harpoon.ui').nav_file(4)<cr>", "Goto mark 4" },
-        g = { ":lua require('harpoon.ui').nav_file(5)<cr>", "Goto mark 5" },
-        q = { ":lua require('harpoon.ui').nav_file(6)<cr>", "Goto mark 6" },
-        w = { ":lua require('harpoon.ui').nav_file(7)<cr>", "Goto mark 7" },
-        e = { ":lua require('harpoon.ui').nav_file(8)<cr>", "Goto mark 8" },
-        r = { ":lua require('harpoon.ui').nav_file(9)<cr>", "Goto mark 9" },
-        n = { ":lua require('harpoon.ui').nav_next()<cr>", "Next file" },
-        p = { ":lua require('harpoon.ui').nav_prev()<cr>", "Prev file" },
+        m = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Mark file" },
+        t = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Toggle UI" },
+        a = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Goto mark 1" },
+        s = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "Goto mark 2" },
+        d = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "Goto mark 3" },
+        f = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "Goto mark 4" },
+        g = { "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", "Goto mark 5" },
+        q = { "<cmd>lua require('harpoon.ui').nav_file(6)<cr>", "Goto mark 6" },
+        w = { "<cmd>lua require('harpoon.ui').nav_file(7)<cr>", "Goto mark 7" },
+        e = { "<cmd>lua require('harpoon.ui').nav_file(8)<cr>", "Goto mark 8" },
+        r = { "<cmd>lua require('harpoon.ui').nav_file(9)<cr>", "Goto mark 9" },
+        n = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Next file" },
+        p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Prev file" },
       },
+
+      ["t"] = {
+        name = "Tree sitter",
+        ["t"] = { "<CMD>TSJToggle<CR>", desc = "Toggle Treesitter Join" },
+        ["o"] = { "<cmd>SymbolsOutline<cr>", desc = "Toggle SymbolsOutline" }
+      }
 
 
     }

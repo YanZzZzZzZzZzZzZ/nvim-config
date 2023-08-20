@@ -108,21 +108,6 @@ return {
     "Wansmer/treesj",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     keys = {
-      {
-        "<leader>tt",
-        "<CMD>TSJToggle<CR>",
-        desc = "Toggle Treesitter Join",
-      },
-      {
-        "<leader>tj",
-        "<CMD>TSJJoin<CR>",
-        desc = "Treesitter Join",
-      },
-      {
-        "<leader>ts",
-        "<CMD>TSJSplit<CR>",
-        desc = "Treesitter Split",
-      },
     },
     cmd = { "TSJToggle", "TSJJoin", "TSJSplit" },
     config = function()

@@ -1,5 +1,4 @@
 -- local settings = require('global_option')
---
 -- local util = require('util')
 --
 return {
@@ -16,7 +15,6 @@ return {
         callback = function(ev)
           -- Enable completion triggered by <c-x><c-o>
           vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-
           -- Buffer local mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
           local opts = { buffer = ev.buf }
@@ -38,10 +36,6 @@ return {
           -- vim.keymap.set('n', '<space>wl', function()
           --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
           -- end, opts)
-          -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
-          -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
-          -- vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
-          -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 
           vim.keymap.set('n', '<leader>j', function()
             vim.lsp.buf.format { async = true }
@@ -115,6 +109,16 @@ return {
     "roobert/hoversplit.nvim",
     config = function()
       require("hoversplit").setup()
+    end
+  },
+
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "VeryLazy",
+    opts = {},
+    config = function(_, opts)
+      local cfg = require("lsp_signature")
+      require "lsp_signature".setup(cfg)
     end
   }
 }

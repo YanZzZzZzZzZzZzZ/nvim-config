@@ -1,33 +1,4 @@
-local M = {}
-
-M[#M + 1] = {
-  "numToStr/Navigator.nvim",
-  config = function()
-    require("Navigator").setup({})
-    local map = vim.api.nvim_set_keymap
-    local default_options = { noremap = true, silent = true }
-    -- tmux navigation
-    map("n", "<C-h>", "<cmd>lua require('Navigator').left()<CR>", default_options)
-    map("n", "<C-k>", "<cmd>lua require('Navigator').up()<CR>", default_options)
-    map("n", "<C-l>", "<cmd>lua require('Navigator').right()<CR>", default_options)
-    map("n", "<C-j>", "<cmd>lua require('Navigator').down()<CR>", default_options)
-  end,
-}
-
-
--- M.Flit = {
---   "ggandor/flit.nvim",
---   keys = function()
---     local ret = {}
---     for _, key in ipairs { "f", "F", "t", "T" } do
---       ret[#ret + 1] = { key, mode = { "n", "x", "o" }, desc = key }
---     end
---     return ret
---   end,
---   opts = { labeled_modes = "nx" },
--- }
-
-M[#M + 1] = {
+local leap = {
   "ggandor/leap.nvim",
   keys = {
     { "s",  mode = { "n", "x", "o" }, desc = "Leap forward to" },
@@ -45,6 +16,50 @@ M[#M + 1] = {
   end,
 }
 
+local navigator =
+{
+  "numToStr/Navigator.nvim",
+  config = function()
+    require("Navigator").setup({})
+    local map = vim.api.nvim_set_keymap
+    local default_options = { noremap = true, silent = true }
+    -- tmux navigation
+    map("n", "<C-h>", "<cmd>lua require('Navigator').left()<CR>", default_options)
+    map("n", "<C-k>", "<cmd>lua require('Navigator').up()<CR>", default_options)
+    map("n", "<C-l>", "<cmd>lua require('Navigator').right()<CR>", default_options)
+    map("n", "<C-j>", "<cmd>lua require('Navigator').down()<CR>", default_options)
+  end,
+}
 
+local flash = {
+  "folke/flash.nvim",
+  event = "VeryLazy",
+  ---@type Flash.Config
+  opts = {},
+  -- stylua: ignore
+  keys = {
+    { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+    { "S",     mode = { "n", "o", "x" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
+    { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
+    { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+    { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc =
+    "Toggle Flash Search" },
+  },
+}
 
-return M
+-- local filt = {
+--   "ggandor/flit.nvim",
+--   keys = function()
+--     local ret = {}
+--     for _, key in ipairs { "f", "F", "t", "T" } do
+--       ret[#ret + 1] = { key, mode = { "n", "x", "o" }, desc = key }
+--     end
+--     return ret
+--   end,
+--   opts = { labeled_modes = "nx" },
+-- }
+
+return {
+  navigator,
+  flash,
+}
