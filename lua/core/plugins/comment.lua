@@ -1,7 +1,4 @@
-M = {}
-
-
-M[#M + 1] = {
+local neogen = {
   "danymat/neogen",
   dependencies = "nvim-treesitter/nvim-treesitter",
   config = true,
@@ -9,7 +6,7 @@ M[#M + 1] = {
   -- version = "*"
 }
 
-M[#M + 1] = {
+local comment = {
   'numToStr/Comment.nvim',
   opts = {
     mapping = false,
@@ -18,7 +15,7 @@ M[#M + 1] = {
   lazy = false,
 }
 
-M[#M + 1] = {
+local todocomment = {
   "folke/todo-comments.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
   opts = {
@@ -28,7 +25,7 @@ M[#M + 1] = {
   }
 }
 
-M[#M + 1] = {
+local commentbox = {
   "LudoPinelli/comment-box.nvim",
   opts = {
 
@@ -36,5 +33,9 @@ M[#M + 1] = {
 
 }
 
-
-return M
+return {
+  neogen,
+  comment,
+  todocomment,
+  commentbox,
+}

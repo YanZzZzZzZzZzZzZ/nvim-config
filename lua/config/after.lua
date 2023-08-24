@@ -1,5 +1,5 @@
 -- EDIT COLOR
-vim.cmd("colorscheme earlysummer")
+vim.cmd("colorscheme fluoromachine")
 
 vim.diagnostic.config({
   virtual_lines = {

@@ -107,7 +107,13 @@ M.setup = function(whichkey)
         c = { "<cmd>Lspsaga show_cursor_diagnostic<cr>", "Cursor diagnostics" }
       },
 
-      ["u"] = { ":UndotreeToggle<cr>", "Toggle UndotreeToggle" },
+      ["u"] = { "<cmd>UndotreeToggle<cr>", "Toggle UndotreeToggle" },
+
+      ["t"] = {
+        name = "Tree sitter",
+        ["j"] = { "<cmd>TSJToggle<cr>", "Toggle Treesitter Join" },
+        ["o"] = { "<cmd>SymbolsOutline<cr>", "Toggle SymbolsOutline" },
+      },
 
       ["m"] = {
         name = " Harpoon",
@@ -126,11 +132,6 @@ M.setup = function(whichkey)
         p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Prev file" },
       },
 
-      ["t"] = {
-        name = "Tree sitter",
-        ["t"] = { "<CMD>TSJToggle<CR>", desc = "Toggle Treesitter Join" },
-        ["o"] = { "<cmd>SymbolsOutline<cr>", desc = "Toggle SymbolsOutline" }
-      }
 
 
     }

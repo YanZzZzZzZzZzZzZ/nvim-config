@@ -106,9 +106,7 @@ return {
       -- Depth past which nodes will be folded by default
       autofold_depth = 1,
     },
-    keys = {
-      { "<leader>tO", "<cmd>SymbolsOutline<cr>", desc = "Toggle SymbolsOutline" },
-    },
+    cmd = { "SymbolsOutline" },
   },
 
   {

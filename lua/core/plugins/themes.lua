@@ -2,7 +2,7 @@ return {
 
   { "rafamadriz/neon" },
 
-  { "christianchiarulli/nvcode-color-schemes.vim" },
+  -- { "christianchiarulli/nvcode-color-schemes.vim" },
 
   {
     "folke/tokyonight.nvim",
@@ -145,7 +145,7 @@ return {
       'maxmx03/fluoromachine.nvim',
       opts = {
         -- HAS: retrowave, fluoromachine, delta
-        theme = "delta"
+        theme = "fluoromachine"
       }
     }
   },
@@ -175,5 +175,7 @@ return {
       })
     end
   },
+
+  { "lunarvim/lunar.nvim", opts = {} },
 
 }

@@ -1,3 +1,5 @@
+local util = require('util')
+
 local function map(mode, lhs, rhs, opts)
   opts = opts or {}
   opts.silent = opts.silent ~= false
@@ -163,3 +165,5 @@ map('n', '<leader>\\', '<C-W>v', { desc = 'Split window right' })
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 map("v", "p", '"_dP', opts)
+
+map("i", "<c-l>", util.jump_end_bracket, { desc = "Skip over a bracket, or other common delim symbols" })
