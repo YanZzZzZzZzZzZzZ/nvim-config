@@ -122,7 +122,7 @@ return {
   -- Lua
   {
     "folke/zen-mode.nvim",
-    cmd="ZenMode",
+    cmd = "ZenMode",
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
@@ -130,6 +130,8 @@ return {
     }
   },
 
-  { "farmergreg/vim-lastplace" }
+  { "farmergreg/vim-lastplace" },
+
+  { "xiyaowong/virtcolumn.nvim",      opts = {} },
 
 }
