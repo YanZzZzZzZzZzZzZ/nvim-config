@@ -1,61 +1,103 @@
 return {
 
-  { "rafamadriz/neon" },
+  { "rafamadriz/neon", lazy = true },
 
   -- { "christianchiarulli/nvcode-color-schemes.vim" },
 
   {
     "folke/tokyonight.nvim",
-    lazy = false,
     priority = 1000,
+    lazy = true,
     opts = {},
   },
 
-  { "sainnhe/sonokai" },
+  {
+    "sainnhe/sonokai",
+    priority = 1000,
+    lazy = true,
+  },
 
   {
-    "nyoom-engineering/oxocarbon.nvim"
+    "nyoom-engineering/oxocarbon.nvim",
+    priority = 1000,
+    lazy = true,
     -- Add in any other configuration;
     --   event = foo,
     --   config = bar
     --   end,
   },
 
-  { "glepnir/zephyr-nvim" },
+  {
+    "glepnir/zephyr-nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "rockerBOO/boo-colorscheme-nvim" },
+  {
+    "rockerBOO/boo-colorscheme-nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "jim-at-jibba/ariake-vim-colors" },
+  {
+    "jim-at-jibba/ariake-vim-colors",
+    priority = 1000,
+    lazy = true,
+  },
 
   {
     "sainnhe/edge",
-    config = function(...)
+    priority = 1000,
+    lazy = true,
+    config = function()
       vim.g.edge_style = 'neon'
       vim.edge_better_performance = 1
     end
   },
 
-  { "Th3Whit3Wolf/one-nvim" },
+  {
+    "Th3Whit3Wolf/one-nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "yonlu/omni.vim" },
+  {
+    "yonlu/omni.vim",
+    priority = 1000,
+    lazy = true,
+  },
 
   {
     'AlexvZyl/nordic.nvim',
-    lazy = false,
     priority = 1000,
+    lazy = true,
     config = function()
       require 'nordic'.load()
     end
   },
 
-  { "rose-pine/neovim" },
+  {
+    "rose-pine/neovim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "Mofiqul/dracula.nvim" },
+  {
+    "Mofiqul/dracula.nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "projekt0n/github-nvim-theme" },
+  {
+    "projekt0n/github-nvim-theme",
+    priority = 1000,
+    lazy = true,
+  },
 
   {
     'NTBBloodbath/doom-one.nvim',
+    priority = 1000,
+    lazy = true,
     setup = function()
       -- Add color to cursor
       vim.g.doom_one_cursor_coloring = false
@@ -92,38 +134,74 @@ return {
   {
     "neanias/everforest-nvim",
     version = false,
-    lazy = false,
-    priority = 1000, -- make sure to load this before all the other start plugins
+    priority = 1000,
+    lazy = true,
+    opts = {},
     -- Optional; default configuration will be used if setup isn't called.
-    config = function()
-      require("everforest").setup({
-        -- Your config here
-      })
-    end,
   },
 
-  { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "frenzyexists/aquarium-vim" },
+  {
+    "frenzyexists/aquarium-vim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "EdenEast/nightfox.nvim" },
+  {
+    "EdenEast/nightfox.nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { 'Everblush/nvim',           name = 'everblush' },
+  {
+    'Everblush/nvim',
+    name = 'everblush',
+    priority = 1000,
+    lazy = true,
+  },
 
   {
     "olimorris/onedarkpro.nvim",
-    priority = 1000 -- Ensure it loads first
+    priority = 1000,
+    lazy = true,
   },
 
-  { "rmehri01/onenord.nvim" },
+  {
+    "rmehri01/onenord.nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "titanzero/zephyrium" },
+  {
+    "titanzero/zephyrium",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "rebelot/kanagawa.nvim" },
+  {
+    "rebelot/kanagawa.nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "ray-x/starry.nvim" },
+  {
+    "ray-x/starry.nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "ray-x/aurora" },
+  {
+    "ray-x/aurora",
+    priority = 1000,
+    lazy = true,
+  },
 
   {
     "rockyzhang24/arctic.nvim",
@@ -131,18 +209,34 @@ return {
     name = "arctic",
     branch = "main",
     priority = 1000,
+    lazy = true,
   },
 
-  { "yazeed1s/minimal.nvim" },
+  {
+    "yazeed1s/minimal.nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
 
-  { "Yazeed1s/oh-lucy.nvim" },
+  {
+    "Yazeed1s/oh-lucy.nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
-  { "nyngwang/nvimgelion" },
+  {
+    "nyngwang/nvimgelion",
+    priority = 1000,
+    lazy = true,
+  },
 
   {
     {
       'maxmx03/fluoromachine.nvim',
+      name = "fluoromachine",
+      priority = 1000,
+      lazy = true,
       opts = {
         -- HAS: retrowave, fluoromachine, delta
         theme = "fluoromachine"
@@ -150,25 +244,37 @@ return {
     }
   },
 
-  { "sekke276/dark_flat.nvim" },
+  {
+    "sekke276/dark_flat.nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
   {
     "zootedb0t/citruszest.nvim",
-    lazy = false,
     priority = 1000,
+    lazy = true,
   },
 
   {
     "2nthony/vitesse.nvim",
+    priority = 1000,
+    lazy = true,
     dependencies = {
       "tjdevries/colorbuddy.nvim"
     },
   },
 
-  { "kvrohit/mellow.nvim" },
+  {
+    "kvrohit/mellow.nvim",
+    priority = 1000,
+    lazy = true,
+  },
 
   {
     "Shatur/neovim-ayu",
+    priority = 1000,
+    lazy = true,
     config = function()
       require('ayu').setup({
         mirage = true
@@ -176,6 +282,11 @@ return {
     end
   },
 
-  { "lunarvim/lunar.nvim", opts = {} },
+  {
+    "lunarvim/lunar.nvim",
+    priority = 1000,
+    lazy = true,
+    opts = {},
+  },
 
 }

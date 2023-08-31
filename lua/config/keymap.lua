@@ -11,6 +11,11 @@ local add_disc = function(desc)
   return { noremap = true, silent = true, desc = desc }
 end
 
+local function unmap(mode, key, opts) 
+  pcall(function() vim.keymap.del(mode, key, opts) end)
+end
+
+
 -- Space as leader
 map('n', '<Space>', '', opts)
 vim.g.mapleader = ' '
@@ -167,3 +172,9 @@ map("v", ">", ">gv", opts)
 map("v", "p", '"_dP', opts)
 
 map("i", "<c-l>", util.jump_end_bracket, { desc = "Skip over a bracket, or other common delim symbols" })
+
+unmap("n", "H")
+unmap("n", "L")
+
+map("n", "H", "{", add_disc("better nav Up"))
+map("n", "L", "}", add_disc("better nav Down"))

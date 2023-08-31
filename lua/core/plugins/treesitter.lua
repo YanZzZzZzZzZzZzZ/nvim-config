@@ -116,4 +116,9 @@ return {
       })
     end,
   },
+
+  {
+    'm-demare/hlargs.nvim',
+    opts = {}
+  }
 }

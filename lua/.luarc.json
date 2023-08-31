@@ -1,0 +1,25 @@
+{
+    "workspace.library": [
+        "/Users/yzhang/.config/nvim",
+        "/Users/yzhang/.local/share/nvim/site",
+        "/Users/yzhang/.local/share/nvim/lazy/lazy.nvim",
+        "/Users/yzhang/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/Users/yzhang/.local/share/nvim/lazy/mason.nvim",
+        "/Users/yzhang/.local/share/nvim/lazy/nvim-lspconfig",
+        "/Users/yzhang/.local/share/nvim/lazy/plenary.nvim",
+        "/Users/yzhang/.local/share/nvim/lazy/telescope.nvim",
+        "/Users/yzhang/.local/share/nvim/lazy/lsp-format.nvim",
+        "/Users/yzhang/.local/share/nvim/lazy/nvim-numbertoggle",
+        "/Users/yzhang/.local/share/nvim/lazy/nvim-web-devicons",
+        "/Users/yzhang/.local/share/nvim/lazy/nvim-navic",
+        "/Users/yzhang/.local/share/nvim/lazy/barbecue",
+        "/Users/yzhang/.local/share/nvim/lazy/dressing.nvim",
+        "/Users/yzhang/.local/share/nvim/lazy/undotree",
+        "/Users/yzhang/.local/share/nvim/lazy/coq_nvim",
+        "/Users/yzhang/.local/share/nvim/lazy/git-blame.nvim",
+        "/opt/homebrew/Cellar/neovim/0.9.1/share/nvim/runtime",
+        "/opt/homebrew/Cellar/neovim/0.9.1/lib/nvim",
+        "/Users/yzhang/.local/state/nvim/lazy/readme",
+        "${3rd}/luassert/library"
+    ]
+}

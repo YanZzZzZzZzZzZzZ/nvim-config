@@ -106,5 +106,7 @@ return {
       local cfg = require("lsp_signature")
       require "lsp_signature".setup(cfg)
     end
-  }
+  },
+
+  { "folke/neodev.nvim", opts = {} }
 }

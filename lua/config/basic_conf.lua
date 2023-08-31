@@ -8,6 +8,9 @@ vim.opt.wrap = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.o.timeout = true
+vim.o.timeoutlen = 300
+
 vim.g.signify_sign_add = "│"
 vim.g.signify_sign_delete = "│"
 vim.g.signify_sign_change = "│"
@@ -20,7 +23,6 @@ vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 
-vim.o.so = 25
 
 vim.opt.autowrite = true      -- Enable auto write
 vim.opt.clipboard = "unnamed" -- or "unnamedplus"
@@ -63,7 +65,6 @@ vim.opt.number = true
 vim.opt.pumblend = 10     -- Popup blend
 vim.opt.pumheight = 10    -- Maximum number of entries in a popup
 vim.opt.relativenumber = true
-vim.opt.scrolloff = 4     -- Lines of context
 vim.opt.sidescrolloff = 8 -- Columns of context
 -- vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,globals,winsize,wijnpos,terminal"
 vim.opt.shiftround = true -- Round indent
@@ -89,6 +90,7 @@ vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
 vim.opt.winminwidth = 5                -- Minimum window width
 vim.opt.wrap = true                    -- Enable line wrap
 
+vim.o.so = 25
 
 if vim.fn.has("nvim-0.9.0") == 1 then
   vim.opt.splitkeep = "screen"
